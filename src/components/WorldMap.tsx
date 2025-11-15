@@ -11,6 +11,34 @@ interface WorldMapProps {
   data: CountryData[]
 }
 
+interface GeographyProperties {
+  ISO_A2?: string
+  ISO_A3?: string
+  ADM0_A3?: string
+  NAME?: string
+  NAME_EN?: string
+  ADMIN?: string
+  NAME_LONG?: string
+  SOVEREIGNT?: string
+  NAME_SORT?: string
+  NAME_AR?: string
+  NAME_DE?: string
+  NAME_ES?: string
+  NAME_FR?: string
+  NAME_HI?: string
+  NAME_JA?: string
+  NAME_KO?: string
+  NAME_PT?: string
+  NAME_RU?: string
+  NAME_ZH?: string
+  [key: string]: unknown
+}
+
+interface Geography {
+  rsmKey: string
+  properties: GeographyProperties
+}
+
 const BASE_URL = import.meta.env.BASE_URL
 
 const WorldMap: React.FC<WorldMapProps> = ({ data }) => {
@@ -38,11 +66,11 @@ const WorldMap: React.FC<WorldMapProps> = ({ data }) => {
     return () => window.removeEventListener('resize', updateScale)
   }, [])
 
-  const getCountryCode = (geo: any) => {
+  const getCountryCode = (geo: Geography) => {
     return geo.properties.ISO_A2 || geo.properties.ISO_A3 || geo.properties.ADM0_A3 || 'XX'
   }
 
-  const getCountryName = (geo: any) => {
+  const getCountryName = (geo: Geography): string => {
     let countryName = geo.properties.NAME || 
                      geo.properties.NAME_EN || 
                      geo.properties.ADMIN || 
@@ -61,7 +89,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ data }) => {
                      geo.properties.NAME_ZH
 
     if (!countryName) {
-      const allProps = Object.values(geo.properties).filter(val => 
+      const allProps = Object.values(geo.properties).filter((val): val is string => 
         typeof val === 'string' && val.length > 2 && val.length < 50
       )
       countryName = allProps[0] || `Country ${getCountryCode(geo)}`
@@ -74,7 +102,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ data }) => {
     return countryColors[countryCode] || '#d3d3d3'
   }
 
-  const handleMouseEnter = (geo: any, event: React.MouseEvent) => {
+  const handleMouseEnter = (geo: Geography, event: React.MouseEvent) => {
     const countryCode = getCountryCode(geo)
     const count = dataMap.get(countryCode) || 0
     const countryName = getCountryName(geo)
@@ -101,7 +129,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ data }) => {
     }
   }
 
-  const handleTouchStart = (geo: any, event: React.TouchEvent) => {
+  const handleTouchStart = (geo: Geography, event: React.TouchEvent) => {
     const touch = event.touches[0]
     const countryCode = getCountryCode(geo)
     const count = dataMap.get(countryCode) || 0
@@ -128,7 +156,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ data }) => {
         }}
       >
         <Geographies geography={`${BASE_URL}world-110m.json`}>
-          {({ geographies }: { geographies: any[] }) =>
+          {({ geographies }: { geographies: Geography[] }) =>
             geographies.map((geo) => {
               const countryCode = getCountryCode(geo)
               return (
