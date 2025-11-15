@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
+// https://vitejs.dev/config/
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: '/GastroVision-Challenge/',
-})
+  base: command === 'build' ? '/GastroVision-Challenge/' : '/',
+}))
 
