@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GastroVision Challenge</title>
+    <script>
+      // Redirect to index.html for GitHub Pages
+      var path = window.location.pathname;
+      var segments = path.split('/').filter(Boolean);
+      // If we're at /GastroVision-Challenge/ or deeper, redirect to index
+      if (segments.length > 0 && segments[0] === 'GastroVision-Challenge') {
+        window.location.replace('/GastroVision-Challenge/');
+      } else {
+        window.location.replace('/');
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
+
