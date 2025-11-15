@@ -70,6 +70,22 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Verify build output
+        run: |
+          if [ ! -f "dist/index.html" ]; then
+            echo "ERROR: dist/index.html not found"
+            exit 1
+          fi
+          if ! grep -q "/GastroVision-Challenge/assets/" dist/index.html; then
+            echo "ERROR: Built index.html doesn't have correct base path"
+            cat dist/index.html
+            exit 1
+          fi
+          echo "✓ Build verification passed"
+          ls -la dist/
+          echo "--- dist/index.html content ---"
+          cat dist/index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
