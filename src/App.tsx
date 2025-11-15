@@ -18,6 +18,8 @@ function App() {
     handleHashChange()
 
     window.addEventListener('hashchange', handleHashChange)
+
+    // Added Invitation
     
     return () => {
       window.removeEventListener('hashchange', handleHashChange)
