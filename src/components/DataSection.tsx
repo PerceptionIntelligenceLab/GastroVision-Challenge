@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+const BASE_URL = import.meta.env.BASE_URL
+
 const DataSection: React.FC = () => {
   const [mainTab, setMainTab] = useState(0) // 0: Dataset Overview, 1: Download Links
   const [categoryTab, setCategoryTab] = useState(0) // For category tabs inside Dataset Overview
@@ -9,40 +11,40 @@ const DataSection: React.FC = () => {
       title: "Large bowel",
       description: "Represents healthy colonic tissue with typical vascular and mucosal structures. This class is essential for distinguishing normal findings from subtle pathology.",
       images: [
-        "/asserts/Normal mucosa and vascular pattern/Normal mucosa and vascular pattern1.png",
-        "/asserts/Normal mucosa and vascular pattern/Normal mucosa and vascular pattern2.png",
-        "/asserts/Normal mucosa and vascular pattern/Normal mucosa and vascular pattern3.png",
-        "/asserts/Normal mucosa and vascular pattern/Normal mucosa and vascular pattern4.png"
+        `${BASE_URL}asserts/Normal mucosa and vascular pattern/Normal mucosa and vascular pattern1.png`,
+        `${BASE_URL}asserts/Normal mucosa and vascular pattern/Normal mucosa and vascular pattern2.png`,
+        `${BASE_URL}asserts/Normal mucosa and vascular pattern/Normal mucosa and vascular pattern3.png`,
+        `${BASE_URL}asserts/Normal mucosa and vascular pattern/Normal mucosa and vascular pattern4.png`
       ]
     },
     {
       title: "Normal esophagus",
       description: "Shows normal upper GI mucosa and lumen appearance. Differentiating normal esophagus from inflamed or Barrett's mucosa is clinically important for screening and surveillance.",
       images: [
-        "/asserts/Normal esophagus/Normal esophagus.png",
-        "/asserts/Normal esophagus/Normal esophagus2.png",
-        "/asserts/Normal esophagus/Normal esophagus3.png",
-        "/asserts/Normal esophagus/Normal esophagus4.png"
+        `${BASE_URL}asserts/Normal esophagus/Normal esophagus.png`,
+        `${BASE_URL}asserts/Normal esophagus/Normal esophagus2.png`,
+        `${BASE_URL}asserts/Normal esophagus/Normal esophagus3.png`,
+        `${BASE_URL}asserts/Normal esophagus/Normal esophagus4.png`
       ]
     },
     {
       title: "Colon polyps",
       description: "Includes a wide variety of colorectal polyps (hyperplastic, adenomatous, sessile, flat, etc.). Polyp detection and classification are vital for colorectal cancer prevention.",
       images: [
-        "/asserts/colonpolyps/colonpolyps.png",
-        "/asserts/colonpolyps/colonpolyps2.png",
-        "/asserts/colonpolyps/colonpolyps3.png",
-        "/asserts/colonpolyps/colonpolyps4.png"
+        `${BASE_URL}asserts/colonpolyps/colonpolyps.png`,
+        `${BASE_URL}asserts/colonpolyps/colonpolyps2.png`,
+        `${BASE_URL}asserts/colonpolyps/colonpolyps3.png`,
+        `${BASE_URL}asserts/colonpolyps/colonpolyps4.png`
       ]
     },
     {
       title: "Erythema",
       description: "Represents inflamed mucosa with reddish discoloration. This class adds subtlety and difficulty, testing the model's ability to differentiate early inflammatory changes from normal tissue.",
       images: [
-        "/asserts/Erythema/Erythema1.png",
-        "/asserts/Erythema/Erythema2.png",
-        "/asserts/Erythema/Erythema3.png",
-        "/asserts/Erythema/Erythema4.png"
+        `${BASE_URL}asserts/Erythema/Erythema1.png`,
+        `${BASE_URL}asserts/Erythema/Erythema2.png`,
+        `${BASE_URL}asserts/Erythema/Erythema3.png`,
+        `${BASE_URL}asserts/Erythema/Erythema4.png`
       ]
     }
   ]
