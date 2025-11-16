@@ -155,12 +155,6 @@ body {
 
 .challenge-title {
   color: #0066cc;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.challenge-title:hover {
-  color: #dc2626;
 }
 
 
@@ -356,11 +350,253 @@ body {
 .data-tab:hover {
   background-color: #0066cc;
   color: white;
+  border-color: #0066cc;
 }
 
 .data-tab.active {
   background-color: #0066cc;
   color: white;
+  border-color: #0066cc;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-tab {
+  padding: 0.6rem 1.25rem;
+  border: 2px solid #0066cc;
+  background-color: transparent;
+  color: #0066cc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.category-tab:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+.category-tab.active {
+  background-color: #0066cc;
+  color: white;
+  border-color: #0066cc;
+}
+
+.category-content {
+  margin-top: 1rem;
+}
+
+.data-content {
+  padding: 1rem 0;
+  color: #000000;
+}
+
+.data-content h3 {
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.data-content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.data-content li {
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.kaggle-link {
+  transition: color 0.3s ease;
+}
+
+.kaggle-link:hover {
+  color: #0066cc !important;
+}
+
+.dataset-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.dataset-image-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dataset-image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dataset-image-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dataset-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dataset-image-card h4 {
+  color: #0066cc;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1rem 1.5rem 0.5rem 1.5rem;
+}
+
+.dataset-image-card p {
+  color: #000000;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .dataset-images-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.dataset-categories {
+  margin: 2rem 0;
+}
+
+.dataset-category-section {
+  margin-bottom: 3rem;
+}
+
+.dataset-category-section:last-child {
+  margin-bottom: 0;
+}
+
+.category-title {
+  color: #0066cc;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.category-description {
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.category-images-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.category-image-item {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.category-image-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.category-image-item.last-image {
+  position: relative;
+}
+
+.plus-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 102, 204, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.category-image-item.last-image:hover .plus-overlay {
+  opacity: 1;
+}
+
+.plus-symbol {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .category-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .category-image-item {
+    height: 150px;
+  }
+  
+  .category-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-images-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-image-item {
+    height: 200px;
+  }
 }
 
 

@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Statistics from './components/Statistics'
 import Tasks from './components/Tasks'
 import Evaluation from './components/Evaluation'
+import DataSection from './components/DataSection'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -67,19 +68,7 @@ function App() {
           </main>
         )
       case 'dataset':
-        return (
-          <main className="main-content">
-            <h1>Dataset</h1>
-            <h2 style={{ color: '#dc2626' }}>Training Dataset</h2>
-            <p>
-              <a href="https://www.kaggle.com/datasets/debeshjha1/gastrovision-4" target="_blank" rel="noopener noreferrer">
-                * GastroVision-4 Dataset on Kaggle *
-              </a>
-            </p>
-            <h2 style={{ color: '#dc2626' }}>Testing Dataset</h2>
-            <p>Will be announced soon.</p>
-          </main>
-        )
+        return <DataSection />
       case 'tasks':
         return <Tasks />
       case 'conduct':
