@@ -83,5 +83,38 @@ gastrovision-class-challenge/
 │   └── your_team_name_working_note.pdf
 ├── environment.yml  # or requirements.txt
 └── README.md
+```
 
+**Task Definition**
+
+Given an input endoscopic image 𝑥, the model must predict one label  𝑦 ∈{1,2,3,4}  corresponding to one of the defined classes.
+
+**colon_polyp → 0**
+- **ulcer → 1**
+- **normal_mucosa_bowel → 2**
+- **colorectal_cancer → 3**
+
+The official evaluation for the class and the challenge will be based on:
+
+**Primary metric:**
+
+ **Macro F1-Score** 
+
+**Secondary metrics:**
+
+Precision, Recall, Confusion Matrix
+
+**Per-class F1-score**
+
+You should:
+
+Report metrics on the validation set during development.
+Generate test predictions (predictions.csv) using the provided test set.
+Format of predictions.csv
+
+image_id,label
+img_0001.jpg,colon_polyp
+img_0002.jpg,normal_mucosa_bowel
+img_0003.jpg,ulcer
+...
 
