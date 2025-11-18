@@ -39,7 +39,7 @@ You will be evaluated on:
 
 We use the **GastroVision** dataset (endoscopic images). For this course project:
 
-- The dataset and splits are provided via the course / challenge website:  
+- The dataset and splits are provided via the course/challenge website:  
   🔗 **Dataset link:**  
   `https://perceptionintelligencelab.github.io/GastroVision-Challenge/#dataset`
 - Training and validation sets are labeled.
@@ -83,3 +83,5 @@ gastrovision-class-challenge/
 │   └── your_team_name_working_note.pdf
 ├── environment.yml  # or requirements.txt
 └── README.md
+
+
