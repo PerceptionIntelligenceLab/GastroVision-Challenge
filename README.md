@@ -5,7 +5,7 @@ Welcome to the **GastroVision Class Challenge**, the final project for
 
 In this challenge, you will build and evaluate deep learning models for **endoscopic image classification** using the **GastroVision** dataset. The goal is to design a robust and well-documented solution that can generalize to clinical-like data.
 
-> 🎯 **Deliverables (for grading):**
+> **Deliverables (for grading):**
 > 1. **Working note paper** (max 2 pages, PDF)
 > 2. **Model weights** (e.g., `model_best.pth` or `model_best.h5`)
 > 3. **Predictions file** on the test set (e.g., `predictions.csv`)
@@ -45,7 +45,7 @@ We use the **GastroVision** dataset (endoscopic images). For this course project
 - Training and validation sets are labeled.
 - The test set is **label-hidden**; you must generate predictions and submit them.
 
-> ⚠️ **Do not share the raw dataset publicly** outside the class or in public forks if the instructor has restricted redistribution.
+> **Do not share the raw dataset publicly** outside the class or in public forks if the instructor has restricted redistribution.
 
 ### 2.1. Recommended Folder Structure
 
