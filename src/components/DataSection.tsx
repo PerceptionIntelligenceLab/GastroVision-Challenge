@@ -8,7 +8,7 @@ const DataSection: React.FC = () => {
 
   const categories = [
     {
-      title: "Large bowel",
+      title: "Normal mucosa and vascular pattern",
       description: "Represents healthy colonic tissue with typical vascular and mucosal structures. This class is essential for distinguishing normal findings from subtle pathology.",
       images: [
         `${BASE_URL}asserts/Normal mucosa and vascular pattern/Normal mucosa and vascular pattern1.png`,

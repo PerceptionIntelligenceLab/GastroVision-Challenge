@@ -13,7 +13,7 @@ const ChallengeOverview: React.FC = () => {
             Gastrointestinal (GI) endoscopy plays a critical role in the early detection and management of colorectal, esophageal, and inflammatory diseases. However, accurate interpretation of endoscopic findings remains highly operator-dependent and prone to variability across clinicians, training levels, and healthcare settings. With the rapid advancement of AI-assisted endoscopy, there is a growing need for robust, diverse, and clinically meaningful datasets to benchmark machine learning systems for real-world use.
           </p>
           <p style={{ marginBottom: '2rem', lineHeight: '1.8', fontWeight: '500' }}>
-            <strong>Objective:</strong> Participants are required to design a classification model that assigns each endoscopic image to one of four clinically relevant categories: Normal mucosa and vascular pattern (large bowel), Normal esophagus, Colon polyps, and Erythema.
+            <strong>Objective:</strong> Participants are required to design a classification model that assigns each endoscopic image to one of four clinically relevant categories: Normal mucosa and vascular pattern (Normal mucosa and vascular pattern), Normal esophagus, Colon polyps, and Erythema.
           </p>
         </div>
 

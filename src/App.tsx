@@ -112,7 +112,7 @@ function App() {
         <h2>Challenge Task</h2>
         <p>Participants are required to design a classification model that assigns each endoscopic image to one of four clinically relevant categories:</p>
         <ul>
-          <li><strong>Normal mucosa and vascular pattern (large bowel):</strong> Represents healthy colonic tissue with typical vascular and mucosal structures. This class is essential for distinguishing normal findings from subtle pathology.</li>
+          <li><strong>Normal mucosa and vascular pattern (Normal mucosa and vascular pattern):</strong> Represents healthy colonic tissue with typical vascular and mucosal structures. This class is essential for distinguishing normal findings from subtle pathology.</li>
           <li><strong>Normal esophagus:</strong> Shows normal upper GI mucosa and lumen appearance. Differentiating normal esophagus from inflamed or Barrett's mucosa is clinically important for screening and surveillance.</li>
           <li><strong>Colon polyps:</strong> Includes a wide variety of colorectal polyps (hyperplastic, adenomatous, sessile, flat, etc.). Polyp detection and classification are vital for colorectal cancer prevention.</li>
           <li><strong>Erythema:</strong> Represents inflamed mucosa with reddish discoloration. This class adds subtlety and difficulty, testing the model's ability to differentiate early inflammatory changes from normal tissue.</li>
