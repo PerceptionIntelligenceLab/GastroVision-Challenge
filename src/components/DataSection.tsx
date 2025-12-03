@@ -116,7 +116,17 @@ const DataSection: React.FC = () => {
           </p>
           
           <h4 style={{ color: '#0066cc', marginBottom: '1rem' }}>Testing Dataset</h4>
-          <p style={{ marginBottom: '2rem' }}>Will be announced soon.</p>
+          <p style={{ marginBottom: '2rem' }}>
+            <a 
+              href="https://www.kaggle.com/datasets/debeshjha1/gastrovision-challenge-dataset" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="kaggle-link"
+              style={{ color: '#000000', textDecoration: 'underline', fontSize: '1.1rem' }}
+            >
+              GastroVision Challenge Dataset on Kaggle
+            </a>
+          </p>
           
           <p style={{ marginTop: '2rem' }}><strong>Training Dataset Release Date:</strong> November 15, 2025</p>
           <p style={{ marginTop: '1rem' }}>
